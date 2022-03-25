@@ -1,0 +1,120 @@
+*{
+    margin: 0;
+    padding:0;
+}
+body{
+    background-image: url('background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-size: 100vw 100vh;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+.gameContainer{
+    background: none;
+    width: 100%;
+    height: 100vh;
+}
+.Instruct{
+    display: flex;
+     justify-items: center;
+     text-align: center;
+     align-items: centre;
+     background: none;
+     max-width: 200px;
+     margin-top: 65px;
+    margin-left: 20px;
+     font-family: 'Ubuntu', sans-serif;    
+}
+.btn{
+    
+    outline: auto;
+    color:rgb(233, 51, 51) ;
+    background: none;
+    padding: 10px 20px;
+    margin-top: 20px;
+    border: 2px solid darkred;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: bolder;
+    cursor: pointer;
+}
+.btn:hover{
+    
+    background-color:rgba(82, 9, 9, 0.651);
+    color:white;
+}
+
+.dino{
+    background-image: url(Man.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 173px;
+    height: 171px;
+    position: absolute;
+    bottom:0;
+    left: 52px;
+}
+
+.obstacle{
+    width: 150px;
+    height: 200px;
+    background-image: url('zomgiff.gif');
+    background-size: cover;
+    position: absolute;
+    background-repeat: no-repeat;
+    bottom: 0;
+    left: 44vw;
+    
+}
+
+.animateDino{
+    animation: dino 0.6s linear;
+}
+
+.obstacleAni{
+    animation: obstacleAni 5s linear infinite;
+}
+
+.gameOver{
+    position: relative;
+    top:63px;
+    font-size: 53px;
+    text-align: center; 
+    font-family: 'Ubuntu', sans-serif;
+}
+
+#scoreCont{
+    font-size: 25px;
+    color: rgb(233, 51, 51);
+    font-weight: bold;
+    position: absolute;
+    right: 70px;
+    top: 70px;
+    border: 2px solid darkred;
+    padding: 10px;
+    font-family: 'Ubuntu', sans-serif;
+    border-radius: 10px;
+}
+
+@keyframes dino{
+    0%{
+        bottom: 0;
+    }
+    50%{
+        bottom: 622px;
+    }
+    100%{
+        bottom: 0; 
+    }
+}
+
+@keyframes obstacleAni{
+    0%{
+        left: 100vw;
+    }
+    100%{
+        left: -10vw;
+    }
+}
